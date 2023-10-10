@@ -42,9 +42,7 @@ const { Pool } = pkg;
 // si va a usar variables de entorno 
 // connectionString: process.env.DATABASE_URL_INTERNA (en PRODUCCION))
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL_INTERNA,
-    ssl: true
-
+    connectionString: process.env.DATABASE_URL_INTERNA
 })
 
 
