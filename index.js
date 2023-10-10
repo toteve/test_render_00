@@ -72,7 +72,7 @@ app.listen(PORT, () => {
 
 //0. GET para ver ruta raiz
 app.get("/", (req, res) => {
-    res.json({ ok: true, result: "Acceso desde Render" });
+    res.json({ ok: true, result: "Acceso desde Render con BD" });
 });
 
 //0. GET para obtener hora de una bd postgre desde render
