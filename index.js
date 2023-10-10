@@ -12,38 +12,38 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 // definimos el objeto de conexion pool para una bd local
-/* const pool = new Pool({
+ /* const pool = new Pool({
     host: 'localhost',  
     user: 'postgres',
     password: '1234',  
     database: 'plan_de_viajes', 
     port: 5433,
     allowExitOnIdle: true  
-})
- */
+}) */
+ 
 
 // definimos el objeto de conexion pool para una bd remota desde render, si estamos en desarrollo se 
 // usa la externa, en produccion la interna, ambas las otorga RENDER
-/* const pool = new Pool({
+ /* const pool = new Pool({
     connectionString:'postgres://tote:WlZnxlhCyYyNNQv9GfnxvYADGNLsj6zw@dpg-ckirgrcl4vmc73838nng-a.oregon-postgres.render.com/plan_de_viajes',
     ssl: true
 
-})
- */
+}) */
+ 
 
 // si va a usar variables de entorno 
 // connectionString: process.env.DATABASE_URL_EXTERNA (EN DESARROLLO)
-/* const pool = new Pool({
+ /* const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: true
 
-}) */
+})  */
 
 // si va a usar variables de entorno 
 // connectionString: process.env.DATABASE_URL (en PRODUCCION no necesita ssl)
-const pool = new Pool({
+ const pool = new Pool({
     connectionString: process.env.DATABASE_URL
-})
+}) 
 
 
 
