@@ -28,5 +28,5 @@ app.listen(PORT, () => {
 
 //0. GET para ver ruta raiz
 app.get("/", (req, res) => {
-    res.json({ ok: true, result: "Acceso permitido a ruta raiz desde Render" });
+    res.json({ ok: true, result: "Acceso desde Render" });
 });
